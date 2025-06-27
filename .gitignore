@@ -1,6 +1,6 @@
 node_modules
 .env
-readline.js
+# readline.js
 speechToCodeTools.js
 /react-app
 private-chat-log.json
