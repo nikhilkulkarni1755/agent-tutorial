@@ -1,17 +1,41 @@
-# agent-tutorial
+# Agent Tutorial
 
-found this amazing tutorial from this [tweet](https://x.com/adamwathan/status/1929601562772398109) (@adamwathan) and [blog](https://ampcode.com/how-to-build-an-agent)
+Discover how to build an agent inspired by this [tweet from @adamwathan](https://x.com/adamwathan/status/1929601562772398109) and the [original blog post](https://ampcode.com/how-to-build-an-agent).
 
-I've changed the stack to use openai and nodejs, for my convenience.
+---
 
-I've also added some code which logs the requests made and the results from the model, other than that the concepts and results are exactly the same as in the blog post.
+## What’s Different?
 
-keys to add to your env
+- Switched the stack to **Node.js** with **OpenAI** for simplicity and convenience.
+- Added request and response logging for better debugging and transparency.
+- Core concepts and results remain faithful to the original tutorial.
 
-OPENAI_API_KEY={[generate openai key here](https://platform.openai.com/settings/organization/api-keys)}
-BLUESKY_HANDLE={[generate bsky app passwords here](https://bsky.app/settings/app-passwords)}
-BLUESKY_PASSWORD={[generate bsky app passwords here](https://bsky.app/settings/app-passwords)}
-TWITTER_API_KEY={developer.x.com -> create project and app -> keys and tokens -> API key and API key secret}
-TWITTER_API_SECRET={developer.x.com -> create project and app -> keys and tokens -> API key and API key secret}
+---
 
-<!-- ![resulting agent](./Screenshot%202025-06-03%20at%205.55.11%20PM.png) -->
+## Setup
+
+### Required Environment Variables
+
+You will need to add the following keys to your `.env` file:
+
+| Variable             | Description                      | Where to Get It                                                                                       |
+| -------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `OPENAI_API_KEY`     | Your OpenAI API key              | [Generate here](https://platform.openai.com/settings/organization/api-keys)                           |
+| `BLUESKY_HANDLE`     | Your Bluesky app password handle | [Create app password](https://bsky.app/settings/app-passwords)                                        |
+| `BLUESKY_PASSWORD`   | Your Bluesky app password        | [Create app password](https://bsky.app/settings/app-passwords)                                        |
+| `TWITTER_API_KEY`    | Your Twitter API key             | [Developer portal](https://developer.x.com) → Create project & app → Keys and tokens → API key        |
+| `TWITTER_API_SECRET` | Your Twitter API secret          | [Developer portal](https://developer.x.com) → Create project & app → Keys and tokens → API key secret |
+
+---
+
+## Getting Started
+
+1. Clone this repo
+2. Run `npm install`
+3. Add your keys to `.env`
+4. Start the app with `node index.js`
+5. Watch the logs for requests and model outputs
+
+---
+
+_Happy coding! Feel free to open issues or contribute._
