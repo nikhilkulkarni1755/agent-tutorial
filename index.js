@@ -2,8 +2,9 @@ require('dotenv').config();
 const readline = require('./readline');
 const { OpenAI } = require('openai');
 // const tools = require('./tool');
-const tools = require('./screenshotTools');
+// const tools = require('./screenshotTools');
 // const tools = require('./postTools')
+const tools = require('./runCommands')
 // const tools = require('./speechToCodeTools')
 const fs = require('fs');
 const path = require('path');

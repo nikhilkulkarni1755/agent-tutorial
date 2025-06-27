@@ -326,12 +326,12 @@ function getOAuthClient() {
 
 /** ---------- Tools ---------- **/
 
-function printTool(content) {
-  const sentences = splitIntoSentences(content);
-  console.log("📋 Draft - Sentence Breakdown:");
-  sentences.forEach((s, i) => console.log(`${i + 1}. ${s.trim()}`));
-  return sentences.map(s => s.trim());
-}
+// function printTool(content) {
+//   const sentences = splitIntoSentences(content);
+//   console.log("📋 Draft - Sentence Breakdown:");
+//   sentences.forEach((s, i) => console.log(`${i + 1}. ${s.trim()}`));
+//   return sentences.map(s => s.trim());
+// }
 
 const postToTwitter = async ({ content }) => {
   const oauth = getOAuthClient();
@@ -451,18 +451,18 @@ const postToBoth = async ({ content }) => {
 /** ---------- Module Exports ---------- **/
 
 module.exports = [
-  {
-    name: "printTool",
-    description: "Prints numbered sentences from a draft content to help with editing and tweet preparation",
-    parameters: {
-      type: "object",
-      properties: {
-        content: { type: "string", description: "Draft to break into sentences" }
-      },
-      required: ["content"]
-    },
-    function: ({ content }) => printTool(content)
-  },
+  // {
+  //   name: "printTool",
+  //   description: "Prints numbered sentences from a draft content to help with editing and tweet preparation",
+  //   parameters: {
+  //     type: "object",
+  //     properties: {
+  //       content: { type: "string", description: "Draft to break into sentences" }
+  //     },
+  //     required: ["content"]
+  //   },
+  //   function: ({ content }) => printTool(content)
+  // },
   {
     name: "post_to_twitter",
     description: "Posts a tweet to Twitter (with PIN-based OAuth)",
